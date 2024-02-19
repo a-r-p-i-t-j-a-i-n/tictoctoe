@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tiktoketoe</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #first {
+            width: 29px;
+            height: 24px;
+        }
+
+
+        #second {
+            width: 29px;
+            height: 24px;
+        }
+
+        #third {
+            width: 29px;
+            height: 24px;
+        }
+
+        #fourth {
+
+
+            width: 29px;
+            height: 24px;
+        }
+
+        #fifth {
+            width: 29px;
+            height: 24px;
+        }
+
+        #six {
+            width: 29px;
+            height: 24px;
+        }
+
+        #seven {
+            width: 29px;
+            height: 24px;
+        }
+
+        #eight {
+            width: 29px;
+            height: 24px;
+        }
+
+        #nine {
+            width: 29px;
+            height: 24px;
+        }
+
+        .all {
+            margin-top: 50px;
+            background-color: black;
+
+        }
+
+        .red {
+            color: red;
+        }
+
+        #butn {
+            color: red;
+            margin-top: 17px;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+        }
+
+        .h1 {
+            color: rgb(2, 221, 130);
+            /* color: hotpink; */
+        }
+    </style>
+</head>
+<!-- placeholder="&#10060; -->
+
+<body bgcolor="black">
+    <div class="h1">
+        <h2>TIC TOC TOE</h2>
+        .
+        .
+        .
+        <h3><span id="background"> GAME</span><span id="background1"> IS ON!!</span></h3>
+    </div>
+    <div class="all">
+        <div class="red">
+
+            <input id="first" onclick="check2()" type="text" placeholder="">
+            <input onclick="check1()" id="second" type="text" placeholder="">
+            <input onclick="check1()" onclick="check2()" type="text" name="" id="third" placeholder="">
+        </div>
+        <div onclick="check1()" onclick="check2()"><input id="fourth" type="text" placeholder="">
+            <input type="text" id="fifth" placeholder="">
+            <input type="text" name="" id="six">
+        </div>
+        <div onclick="check1()" onclick="check2()"> <input id="seven" type="text">
+            <input type="text" id="eight" placeholder="">
+            <input type="text" name="" id="nine" placeholder="">
+        </div>
+        <button onclick="game()">submit</button>
+        <button id="butn" onclick="refresh()">Play again</button>
+    </div>
+    <script>
+        function game() {
+            let sum;
+            let a, b, c, d, e, f, g, h, i;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = Number(document.getElementById("third").value);
+            d = Number(document.getElementById("fourth").value);
+            e = Number(document.getElementById("fifth").value);
+            f = Number(document.getElementById("six").value);
+            g = Number(document.getElementById("seven").value);
+            h = Number(document.getElementById("eight").value);
+            i = Number(document.getElementById("nine").value);
+            if ((a == b == c) || (d == e == f) || (g == h == i) || (a == e == i) || (c == e == g) || (a == d == g) || (b == e == h) || (c == f == i)) {
+                // if ((a + b + c) == 0 || (d + e + f) == 0 || (g + h + i) == 0 || (a + e + i) == 0 || (c + e + g) == 0) {
+                alert("yeah your pattern have made succefully");
+                document.write("the winner is who has choosen " + a);
+                // alert("the winner is who choosen 0");/
+            }
+            else if ((a == b == c) || (d == e == f) || (g == h == i) || (a == d == g) || (b == e == h) || (c == f == i) || (a == e == i) || (c == e == g)) {
+                alert("yeah your pattern have made succefully");
+                document.writeln("the winner is who choosen 1");
+            }
+
+            // else if ((g + h + i) == NaN) {
+            //     alert("this is not valid complete atleast one ");
+            // }
+            else {
+                alert("no!no!");
+            }
+
+        }
+        function check1() {
+            let a, b, c, d, e, f, g, h, i;
+            a = Number(document.getElementById("first").value);
+
+            // c = Number(document.getElementById("third").value);
+            // d = Number(document.getElementById("fourth").value);
+            // e = Number(document.getElementById("fifth").value);
+            // f = Number(document.getElementById("six").value);
+            // g = Number(document.getElementById("seven").value);
+            // h = Number(document.getElementById("eight").value);
+            // i = Number(document.getElementById("nine").value);
+            // if (a == 0 || a == 1) {
+            //     // || (b == 0 || b == 1) || (c == 0 || c == 1)
+            // }
+            // // else if (b == 0 || b == 1) {
+
+            // // }
+            // else {
+            //     alert("enter only 0 or 1")
+            // }
+
+        }
+        // function start() {
+        //     let st = prompt("Enter your Name");
+        //     confirm("Do you want to start the Game");
+
+        // }
+        // function check2() {
+        //     let b = Number(document.getElementById("second").value);
+        //     if (b == 0 || b == 1) {
+
+        //     }
+        //     else {
+        //         alert("enter only 0 or 1"
+        // document.writeln("yeah WINNER!!!!" + sum);
+        // function changecolor() {
+        //     var i=0;
+        //     var doc = document.getElementById("head");
+        //     var color = ["yellow", "blue", "magenta", "hotpink"];
+        //     doc.style.color = color[i];
+        //     i = (i + 1) % color.lenngth;
+        // }
+        // setInterval(changecolor, 1000);
+        var i = 0, j = 0;
+        function change() {
+            var doc = document.getElementById("background");
+            var color = ["yellow", "blue", "magenta", "hotpink"];
+            doc.style.color = color[i];
+            i = (i + 1) % color.lenngth;
+            var doc1 = document.getElementById("background1");
+            var color = ["brown", "skyblue", "orange", "yellow"];
+            doc1.style.color = color[j];
+            j = (j + 1) % color.length;
+        }
+        setInterval(change, 1000);
+        // <div id="background">&nbsp</div>
+
+
+        function refresh() {
+            window.location.reload("Refresh")
+        }
+
+    </script>
+</body>
+
+</html>
